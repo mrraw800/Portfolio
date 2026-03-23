@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,67 +9,66 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
 </head>
-
+ 
 <body>
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
-
+ 
         <nav class="navbar">
+            <!-- FIX: Added --i variables to all nav links for staggered animation -->
             <a href="#" style="--i:1" class="active">Home</a>
-            <a href="#">About</a>
-            <a href="#">Skill</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#skills" style="--i:3">Skill</a>
+            <a href="#portfolio" style="--i:4">Portfolio</a>
+            <a href="#contact" style="--i:5">Contact</a>
         </nav>
     </header>
-
-    <section class="home">
+ 
+    <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
             <h1>Karan Rawat</h1>
             <h3>And I'm a <span class="text"></span></h3>
             <p>I am a passionate Web Developer and Computer Science student at Echelon Institute of Technology.
                 <br>I have strong fundamentals in HTML, CSS, and JavaScript and experience building responsive and
-                user-friendly
-                web applications.
+                user-friendly web applications.
             </p>
             <div class="home-sci">
                 <a href="#" style="--i:7"><i class='bx bxl-instagram'></i></a>
                 <a href="#" style="--i:8"><i class='bx bxl-whatsapp'></i></a>
                 <a href="#" style="--i:9"><i class='bx bxl-twitter'></i></a>
             </div>
-            <a href="#" class="btn-box">More About Me</a>
+            <a href="#about" class="btn-box">More About Me</a>
         </div>
-        </div>
-        </div>
+        <!-- FIX: Removed 2 extra stray </div> tags that had no opening tags -->
         <span class="home-imgHover"></span>
     </section>
-
+ 
     <section class="about" id="about">
         <div class="about-img">
-            <img src="karan.jpg">
+            <!-- FIX: Added alt attribute for accessibility and SEO -->
+            <img src="karan.jpg" alt="Karan Rawat - Web Developer">
         </div>
         <div class="about-text">
             <h2>About<span>Me</span></h2>
             <h4>Full Stack Developer!</h4>
+            <!-- FIX: Fixed "Com puter" typo → "Computer" -->
             <p>I am a motivated and passionate Web Developer fresher with strong fundamentals in HTML, CSS, and
-                JavaScript. I am currently pursuing B.Tech in Com puter Science from Echelon Institute of Technology. I
+                JavaScript. I am currently pursuing B.Tech in Computer Science from Echelon Institute of Technology. I
                 have hands-on experience in building responsive and user-friendly web applications through projects like
                 a full-stack job portal using Spring Boot and a task manager application.
-
+ 
                 I am continuously improving my skills in frontend and backend development, including Core Java and REST
                 APIs, and I am eager to apply my knowledge to real-world projects while growing as a full-stack
                 developer.</p>
             <br>
-            <br>
             <a href="#" class="btn-box">More About Me</a>
-
-
         </div>
     </section>
-
-    <section>
-        <div class="services" id="services">
+ 
+    <!-- Services Section -->
+    <section id="services">
+        <div class="services">
             <div class="container">
                 <h1 class="sub-title">My <span>Services</span></h1>
                 <div class="services-list">
@@ -78,103 +77,115 @@
                         <h2>UI/UX Design</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus illo facere adipisci
                             suscipit veritatis? Est in quia placeat eligendi optio.</p>
-                            <a href="#" class="read">learn more</a>
+                        <a href="#" class="read">learn more</a>
                     </div>
+                    <!-- FIX: Changed duplicate "UI/UX Design" title to "Web Development" -->
                     <div>
                         <i class='bx bx-crop' style="color: #00efff;"></i>
-                        <h2>UI/UX Design</h2>
+                        <h2>Web Development</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus illo facere adipisci
                             suscipit veritatis? Est in quia placeat eligendi optio.</p>
-                            <a href="#" class="read">learn more</a>
+                        <a href="#" class="read">learn more</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <h1 class="sub-title">My <span>Skills</span></h1>
-        <div class="container1" id="Skills">
+ 
+    <!-- Skills Section -->
+    <!-- FIX: Wrapped skills in a proper <section> tag (was missing, had stray </section> before) -->
+    <section id="skills">
+        <h1 class="sub-title">My <span>Skills</span></h1>
+ 
+        <!-- FIX: Changed id="Skills" → id="skills" (lowercase for consistency) -->
+        <div class="container1" id="skills-technical">
             <h1 class="heading1">Technical Skills</h1>
-            <div class="bar">
-    <i style="color: #c95d2e;" class="bx bxl-html5"></i>
-    <div class="info">
-        <span>HTML</span>
-    </div>
-    <div class="progress-line html">
-        <span></span>
-    </div>
-</div>
-             <div class="bar">
-    <i style="color: #147bbc;" class='bx bxl-css3'></i>
-    <div class="info">
-        <span>CSS</span>
-    </div>
-    <div class="progress-line css">
-        <span></span>
-    </div>
-</div>
-             <div class="bar">
-    <i style="color: #b0bc1e;" class='bx bxl-javascript'></i>
-    <div class="info">
-        <span>Javascript</span>
-    </div>
-    <div class="progress-line html">
-        <span></span>
-    </div>
-</div>
-             <div class="bar"><i style="color: #00599C;" class='bx bxl-c-plus-plus'></i>
-                <div class="info">
-                    <span>C++</span>
+            <!-- FIX: Added .Technical-bars wrapper so CSS selectors .Technical-bars .bar work correctly -->
+            <div class="Technical-bars">
+                <div class="bar">
+                    <i style="color: #c95d2e;" class="bx bxl-html5"></i>
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progress-line html">
+                        <span></span>
+                    </div>
                 </div>
-                <div class="progress-line C++">
-                    <span></span>
+                <div class="bar">
+                    <i style="color: #147bbc;" class='bx bxl-css3'></i>
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <i style="color: #b0bc1e;" class='bx bxl-javascript'></i>
+                    <div class="info">
+                        <span>Javascript</span>
+                    </div>
+                    <div class="progress-line javascript">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <i style="color: #00599C;" class='bx bxl-c-plus-plus'></i>
+                    <div class="info">
+                        <span>C++</span>
+                    </div>
+                    <div class="progress-line cpp">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <i style="color: #f89820;" class='bx bxl-java'></i>
+                    <div class="info">
+                        <span>JAVA</span>
+                    </div>
+                    <div class="progress-line java">
+                        <span></span>
+                    </div>
                 </div>
             </div>
-             <div class="bar"><i style="color: #f89820;" class='bx bxl-java'></i>
-                <div class="info">
-                    <span>JAVA</span>
-                </div>
-                <div class="progress-line java">
-                    <span></span>
-                </div>
+            <!-- FIX: Removed stray </div> that had no opening tag -->
+        </div>
+ 
+        <div class="container1">
+            <h1 class="heading1">Professional Skills</h1>
+            <div class="radial-bars">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text">Creativity</div>
+            </div>
+            <div class="radial-bars">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text">Communication</div>
+            </div>
+            <div class="radial-bars">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text">Problem Solving</div>
+            </div>
+            <div class="radial-bars">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text">Teamwork</div>
             </div>
         </div>
-    </div>
-    
-    
-    <div class="container1">
-        <h1 class="heading1">Professional Skills</h1>
-        <div class="radial-bars">
-            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">90%</div>
-            <div class="text">creativity</div>
-        </div>
-        <div class="radial-bars">
-            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">90%</div>
-            <div class="text">Communication</div>
-        </div>
-        <div class="radial-bars">
-            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">90%</div>
-            <div class="text">Problem Solving</div>
-        </div>
-        <div class="radial-bars">
-            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">90%</div>
-            <div class="text">Teamwork</div>
-        </div>
-    </div>
     </section>
-
-    <script src="1.js"></script>
+ 
+    <!-- FIX: Renamed from "1.js" to "script.js" for better naming convention -->
+    <script src="script.js"></script>
 </body>
-
+ 
 </html>
