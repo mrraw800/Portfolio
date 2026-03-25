@@ -761,6 +761,23 @@ section {
     transform: scaleX(0);
     transform-origin: left;
 }
+.progress-line.html span{
+    width: 90%;
+}
+.progress-line.css span{
+    width: 60%;
+}
+.progress-line.javascript span{
+    width: 84%;
+}
+.progress-line.cpp span{
+    width: 50%;
+}
+.progress-line.java span{
+    width: 70%;
+}
+
+
 
 /* ─── Keyframe Animations ───────────────────────────────────── */
 
